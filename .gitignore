@@ -1,0 +1,16 @@
+# Secretos (BYOK): nunca subir claves
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Frontend
+node_modules/
+dist/
