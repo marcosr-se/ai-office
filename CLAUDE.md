@@ -39,6 +39,6 @@ Oficina 2D en pixel-art en el navegador donde agentes de IA trabajan como una em
 4. Grabación/replay → modo demo → despliegue estático.
 5. Memoria de agentes, más roles, `GroqProvider` y fallback ante 429.
 
-## Estado actual (fase 0)
-- Hecho: proyecto aplanado en `backend/`, compila y pasa el test de contexto con Java 21; `git init` (rama `main`), `.gitignore` raíz con `.env`, `.env.example`, primer commit.
-- Pendiente: SDK 21 en IntelliJ, repo en GitHub y `/api/health` (Marcos).
+## Estado actual
+- Fase 0 terminada: proyecto Spring Boot en `backend/`, Git + repo en GitHub (https://github.com/marcosr-se/ai-office), `.gitignore` con `.env`, `.env.example`, IntelliJ con SDK 21 y `GET /api/health` → `{"status":"ok"}` (paquete `health`: `HealthController` + record `HealthResponse`).
+- Siguiente: fase 1 (dominio sin IA).
