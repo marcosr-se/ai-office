@@ -41,4 +41,5 @@ Oficina 2D en pixel-art en el navegador donde agentes de IA trabajan como una em
 
 ## Estado actual
 - Fase 0 terminada: proyecto Spring Boot en `backend/`, Git + repo en GitHub (https://github.com/marcosr-se/ai-office), `.gitignore` con `.env`, `.env.example`, IntelliJ con SDK 21 y `GET /api/health` → `{"status":"ok"}` (paquete `health`: `HealthController` + record `HealthResponse`).
-- Siguiente: fase 1 (dominio sin IA).
+- Fase 1 terminada (2026-11-10): paquete `domain` (`Agent`, `Role`, `Location`, `Task`, `TaskStatus`, `Message`, `Office`), paquete `llm` (`LLMProvider`, `MockProvider`), paquete `simulation` (`Simulation`, `ConsoleApp`, que se ejecuta por consola) y tests JUnit de `Agent`, `Task`, `Office` y `MockProvider`. Enunciado en `docs/enunciados/fase-1-dominio.pdf`. `Simulation`, `ConsoleApp` y los tests los escribió Claude a petición de Marcos.
+- Siguiente: fase 2 (`GeminiProvider`). Los extras opcionales de la fase 1 (página 8 del PDF) siguen sin hacer.
