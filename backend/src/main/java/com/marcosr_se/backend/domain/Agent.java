@@ -53,9 +53,9 @@ public class Agent {
     public List<String> getMemory() {
         return List.copyOf(memory);
     }
-
+    @Override
     public String toString() {
-        return name + "(" + role.getDisplayName() + ")";
+        return name + " (" + role.getDisplayName() + ")";
     }
 
 }
