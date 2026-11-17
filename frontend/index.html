@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oficina IA</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%231d1b26'/><rect x='4' y='3' width='8' height='6' fill='%23f1c27d'/><rect x='4' y='2' width='8' height='2' fill='%236b3e26'/><rect x='3' y='9' width='10' height='5' fill='%233a7bd5'/></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app">
+      <main class="stage">
+        <div id="game" aria-label="Oficina en pixel-art"></div>
+      </main>
+
+      <aside class="panel">
+        <header class="panel-head">
+          <h1>Oficina IA</h1>
+          <span id="mode" class="badge" data-kind="demo">Demo</span>
+        </header>
+
+        <form id="order-form" class="order">
+          <label for="order">Encargo del cliente</label>
+          <div class="row">
+            <input id="order" type="text" placeholder="Ej.: Make a website for a coffee shop" autocomplete="off" />
+            <button id="order-btn" type="submit">Reproducir</button>
+          </div>
+          <p id="order-note" class="note">Cargando…</p>
+        </form>
+
+        <div class="controls">
+          <span>Velocidad</span>
+          <div id="speed" class="seg" role="group" aria-label="Velocidad">
+            <button type="button" data-speed="1" class="on">1×</button>
+            <button type="button" data-speed="2">2×</button>
+            <button type="button" data-speed="4">4×</button>
+          </div>
+        </div>
+
+        <nav class="tabs" role="tablist">
+          <button type="button" role="tab" data-tab="tareas" class="on" aria-selected="true">Tareas <span id="n-tareas" class="count"></span></button>
+          <button type="button" role="tab" data-tab="pizarra" aria-selected="false">Pizarra <span id="n-pizarra" class="count"></span></button>
+          <button type="button" role="tab" data-tab="registro" aria-selected="false">Registro</button>
+        </nav>
+
+        <section id="tab-tareas" class="tab on">
+          <p id="order-current" class="order-current"></p>
+          <ol id="tasks" class="tasks"></ol>
+        </section>
+        <section id="tab-pizarra" class="tab">
+          <ul id="files" class="files"></ul>
+          <div id="file-view" class="file-view"></div>
+        </section>
+        <section id="tab-registro" class="tab">
+          <ol id="log" class="log"></ol>
+        </section>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

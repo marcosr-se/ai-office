@@ -1,0 +1,351 @@
+{
+ "version": 1,
+ "title": "Web para una cafetería",
+ "order": "Make a website for a coffee shop",
+ "events": [
+  {
+   "event": {
+    "type": "OFFICE_STATE",
+    "agents": [
+     {
+      "id": "ceo",
+      "name": "Carla",
+      "role": "CEO",
+      "location": "DESK"
+     },
+     {
+      "id": "dev",
+      "name": "Ana",
+      "role": "DEVELOPER",
+      "location": "DESK"
+     },
+     {
+      "id": "designer",
+      "name": "Diego",
+      "role": "DESIGNER",
+      "location": "DESK"
+     },
+     {
+      "id": "tester",
+      "name": "Tomas",
+      "role": "TESTER",
+      "location": "DESK"
+     }
+    ],
+    "tasks": []
+   }
+  },
+  {
+   "event": {
+    "type": "ORDER_RECEIVED",
+    "order": "Make a website for a coffee shop"
+   },
+   "delayMs": 400
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "ceo",
+    "active": true
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "ceo",
+    "active": false
+   },
+   "delayMs": 2600
+  },
+  {
+   "event": {
+    "type": "TASK_CREATED",
+    "task": {
+     "id": "task-1",
+     "title": "Build the home page",
+     "role": "DEVELOPER",
+     "status": "PENDING",
+     "assigneeId": null,
+     "result": null
+    }
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_CREATED",
+    "task": {
+     "id": "task-2",
+     "title": "Design the logo",
+     "role": "DESIGNER",
+     "status": "PENDING",
+     "assigneeId": null,
+     "result": null
+    }
+   },
+   "delayMs": 200
+  },
+  {
+   "event": {
+    "type": "TASK_CREATED",
+    "task": {
+     "id": "task-3",
+     "title": "Test the home page",
+     "role": "TESTER",
+     "status": "PENDING",
+     "assigneeId": null,
+     "result": null
+    }
+   },
+   "delayMs": 200
+  },
+  {
+   "event": {
+    "type": "WARNING",
+    "message": "Skipped invalid line: JANITOR: Clean the office"
+   },
+   "delayMs": 200
+  },
+  {
+   "event": {
+    "type": "TASK_ASSIGNED",
+    "taskId": "task-1",
+    "agent": "dev"
+   },
+   "delayMs": 300
+  },
+  {
+   "event": {
+    "type": "MESSAGE",
+    "from": "ceo",
+    "to": "dev",
+    "content": "Your task: Build the home page"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "dev",
+    "to": "DESK"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_STARTED",
+    "taskId": "task-1"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "dev",
+    "active": true
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "dev",
+    "active": false
+   },
+   "delayMs": 3200
+  },
+  {
+   "event": {
+    "type": "FILE_WRITTEN",
+    "agent": "dev",
+    "taskId": "task-1",
+    "path": "index.html",
+    "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Bean There</title>\n  <style>\n    body { margin: 0; font-family: Georgia, serif; background: #fbf5ec; color: #3b2a1e; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: #3b2a1e; color: #fbf5ec; }\n    nav a { color: #f5b14c; margin-left: 16px; text-decoration: none; }\n    .hero { padding: 48px 24px; text-align: center; }\n    .hero h1 { font-size: 2.2rem; margin: 0 0 8px; }\n  </style>\n</head>\n<body>\n  <header>\n    <strong>Bean There</strong>\n    <nav><a href=\"#menu\">Menu</a><a href=\"#visit\">Visit us</a></nav>\n  </header>\n  <section class=\"hero\">\n    <h1>Coffee worth the walk</h1>\n    <p>Freshly roasted every morning, two blocks from campus.</p>\n  </section>\n</body>\n</html>\n"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_COMPLETED",
+    "taskId": "task-1",
+    "result": "index.html with a header and a menu"
+   }
+  },
+  {
+   "event": {
+    "type": "MESSAGE",
+    "from": "dev",
+    "to": "ceo",
+    "content": "Done: Build the home page"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_ASSIGNED",
+    "taskId": "task-2",
+    "agent": "designer"
+   },
+   "delayMs": 300
+  },
+  {
+   "event": {
+    "type": "MESSAGE",
+    "from": "ceo",
+    "to": "designer",
+    "content": "Your task: Design the logo"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "designer",
+    "to": "DESK"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_STARTED",
+    "taskId": "task-2"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "designer",
+    "active": true
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "designer",
+    "active": false
+   },
+   "delayMs": 2800
+  },
+  {
+   "event": {
+    "type": "FILE_WRITTEN",
+    "agent": "designer",
+    "taskId": "task-2",
+    "path": "logo.svg",
+    "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 120\">\n  <circle cx=\"60\" cy=\"60\" r=\"56\" fill=\"#3b2a1e\"/>\n  <path d=\"M34 50h44v22a18 18 0 0 1-18 18h-8a18 18 0 0 1-18-18z\" fill=\"#fbf5ec\"/>\n  <path d=\"M78 56h6a9 9 0 0 1 0 18h-6\" fill=\"none\" stroke=\"#fbf5ec\" stroke-width=\"5\"/>\n  <path d=\"M48 30c-4 6 4 8 0 14M60 28c-4 6 4 8 0 14\" stroke=\"#f5b14c\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/>\n</svg>\n"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_COMPLETED",
+    "taskId": "task-2",
+    "result": "logo.svg with a coffee cup"
+   }
+  },
+  {
+   "event": {
+    "type": "MESSAGE",
+    "from": "designer",
+    "to": "ceo",
+    "content": "Done: Design the logo"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_ASSIGNED",
+    "taskId": "task-3",
+    "agent": "tester"
+   },
+   "delayMs": 300
+  },
+  {
+   "event": {
+    "type": "MESSAGE",
+    "from": "ceo",
+    "to": "tester",
+    "content": "Your task: Test the home page"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "tester",
+    "to": "DESK"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_STARTED",
+    "taskId": "task-3"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "tester",
+    "active": true
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_THINKING",
+    "agent": "tester",
+    "active": false
+   },
+   "delayMs": 2400
+  },
+  {
+   "event": {
+    "type": "FILE_WRITTEN",
+    "agent": "tester",
+    "taskId": "task-3",
+    "path": "test-report.md",
+    "content": "# Test report - home page\n\n| Check | Result |\n|---|---|\n| Header shows the shop name | OK |\n| Menu links point to #menu and #visit | OK |\n| Page has a <title> | OK |\n| Text is readable on mobile | OK |\n\n**0 bugs found.**\n"
+   }
+  },
+  {
+   "event": {
+    "type": "TASK_COMPLETED",
+    "taskId": "task-3",
+    "result": "Report: 0 bugs found"
+   }
+  },
+  {
+   "event": {
+    "type": "MESSAGE",
+    "from": "tester",
+    "to": "ceo",
+    "content": "Done: Test the home page"
+   }
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "ceo",
+    "to": "MEETING_ROOM"
+   },
+   "delayMs": 600
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "dev",
+    "to": "MEETING_ROOM"
+   },
+   "delayMs": 150
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "designer",
+    "to": "MEETING_ROOM"
+   },
+   "delayMs": 150
+  },
+  {
+   "event": {
+    "type": "AGENT_MOVE",
+    "agent": "tester",
+    "to": "MEETING_ROOM"
+   },
+   "delayMs": 150
+  },
+  {
+   "event": {
+    "type": "RUN_FINISHED"
+   },
+   "delayMs": 400
+  }
+ ]
+}
